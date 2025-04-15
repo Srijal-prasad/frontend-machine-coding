@@ -1,38 +1,97 @@
-.App {
+/* === THEME STYLES === */
+
+body.light {
+  background-color: #f4f6f8;
+  color: #2c3e50;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* === MAIN CONTAINER === */
+
+.container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
+  font-family: "Segoe UI", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home h1 {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* === GRID OF CHALLENGES === */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  transition: all 0.3s ease;
+  color: #333;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* === DARK MODE CARDS === */
+body.dark .card {
+  background-color: #2c2c2c;
+  border-color: #444;
+  color: #f1f1f1;
+}
+
+body.dark .card:hover {
+  background-color: #3a3a3a;
+}
+
+/* === THEME TOGGLE BUTTON === */
+.theme-toggle {
+  background-color: transparent;
+  border: 1px solid #888;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #ddd;
+}
+
+body.dark .theme-toggle:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+/* === BACK LINK === */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+body.dark .back-link {
+  color: #66aaff;
 }
